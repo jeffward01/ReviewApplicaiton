@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using ReviewApplication.API.Models;
+using ReviewApplication.Core.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +12,13 @@ namespace ReviewApplication.API
 {
     public class AuthRepository : IDisposable
     {
-        private AuthContext _ctx;
+        private ReviewApplicationDbContext _ctx;
 
         private UserManager<IdentityUser> _userManager;
 
         public AuthRepository()
         {
-            _ctx = new AuthContext();
+            _ctx = new ReviewApplicationDbContext();
             _userManager = new UserManager<IdentityUser>(new UserStore<IdentityUser>(_ctx));
         }
 
