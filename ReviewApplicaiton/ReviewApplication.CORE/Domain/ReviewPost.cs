@@ -8,9 +8,10 @@ namespace ReviewApplication.CORE.Domain
 {
     public class ReviewPost
     {
-        public int ReviewID { get; set; }
-        public int CompanyID { get; set; }
-        public int InsuranceAgentID { get; set; }
+        public int ReviewPostID { get; set; } //Primary Key
+        public int CompanyID { get; set; } // Foriegn Key
+        public int InsuranceAgentID { get; set; } // Foriegn Key
+
         public int CompanyRating { get; set; }
         public string PostTitle { get; set; }
         public string PostBody { get; set; }

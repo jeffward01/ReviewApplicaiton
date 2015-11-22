@@ -8,8 +8,9 @@ namespace ReviewApplication.CORE.Domain
 {
     public class CompanyProfile
     {
-        public int UserID { get; set; }
-        public int CompanyID { get; set; }
+        public int CompanyID { get; set; } //Primary Key
+        public int UserID { get; set; }  // Foreign Key
+
         public string CompanyName { get; set; }
         public string Address1 { get; set; }
         public string Address2 { get; set; }

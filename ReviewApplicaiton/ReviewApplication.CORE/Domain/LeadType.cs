@@ -8,7 +8,9 @@ namespace ReviewApplication.CORE.Domain
 {
     class LeadType
     {
-        public int LeadTypeTableID { get; set; }
+        public int LeadTypeTableID { get; set; } // Primary Key
+        public int InsuranceAgentID { get; set; } //Foreign Key
+
         public bool TelemarketerLeads { get; set; }
         public string TelemarketingLeadNotes { get; set; }
         

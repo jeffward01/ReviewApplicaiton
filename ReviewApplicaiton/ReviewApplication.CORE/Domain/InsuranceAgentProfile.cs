@@ -8,8 +8,9 @@ namespace ReviewApplication.CORE.Domain
 {
     public class InsuranceAgentProfile
     {
-        public int UserID { get; set; }
-        public int InsuranceAgentID { get; set; }
+        public int InsuranceAgentID { get; set; } // Primary Key
+        public int UserID { get; set; } // Forign Key
+
         public string ProfileName { get; set; }
         public DateTime JoinDate { get; set; }
 

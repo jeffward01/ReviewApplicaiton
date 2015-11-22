@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ReviewApplication.CORE.Domain
 {
-    public class CompanyProduct
+    public class LeadProduct
     {
-        public int CompanyID { get; set; }
-        public int ProductID { get; set; }
+        public int LeadProductID { get; set; } //Primary Key
+        public int CompanyID { get; set; } //Forign Key
 
         public string LeadType { get; set; }
         public string Price { get; set; }

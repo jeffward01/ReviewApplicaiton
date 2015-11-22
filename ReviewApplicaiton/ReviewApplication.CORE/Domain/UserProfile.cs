@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace ReviewApplication.CORE.Domain
 {
-    class UserProfile
+   public class UserProfile
     {
+        public int UserID { get; set; } // Primary Key
+
+        public string  Email { get; set; }
+        public string Password { get; set; }
+        public string AccountType { get; set; }
+        public DateTime CreatedDate { get; set; }
+
+        //Add Vitrual Varibles
+
+        //Add methods if any (update)
+
+        
+        
     }
 }
