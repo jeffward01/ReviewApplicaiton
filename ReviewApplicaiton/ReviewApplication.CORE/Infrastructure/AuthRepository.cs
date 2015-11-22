@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using ReviewApplication.API.Models;
-using ReviewApplication.Core.Infrastructure;
+using ReviewApplication.CORE.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,0 +1,7 @@
+C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.API.Tests\obj\Debug\ReviewApplication.API.Tests.csprojResolveAssemblyReference.cache
+C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.API.Tests\bin\Debug\ReviewApplication.API.Tests.dll.config
+C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.API.Tests\bin\Debug\ReviewApplication.API.Tests.dll
+C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.API.Tests\bin\Debug\ReviewApplication.API.Tests.pdb
+C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.API.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.API.Tests\obj\Debug\ReviewApplication.API.Tests.dll
+C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.API.Tests\obj\Debug\ReviewApplication.API.Tests.pdb

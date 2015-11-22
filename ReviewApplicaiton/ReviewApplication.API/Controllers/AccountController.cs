@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using ReviewApplication.API.Models;
+using ReviewApplication.CORE.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
