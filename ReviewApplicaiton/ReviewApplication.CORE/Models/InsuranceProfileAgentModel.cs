@@ -37,8 +37,28 @@ namespace ReviewApplication.CORE.Models
         public int AverageQuanitityOfLeadsPurchasedPerWeek { get; set; }
         public int AverageQuanitityOfLeadsPurchasedPerMonth { get; set; }
 
+        //Lead Preferance
+        public bool TelemarketerLeads { get; set; }
+        public string TelemarketingLeadNotes { get; set; }
 
-        //Add Vitrual Varibles
+        public bool MailLeads { get; set; }
+        public string MailLeadLeadNotes { get; set; }
+
+        public bool Press1Leads { get; set; }
+        public string Press1LeadNotes { get; set; }
+
+        public bool InternetLeads { get; set; }
+        public string InternetLeadNotes { get; set; }
+
+        public bool ColdCallPhoneNumberLists { get; set; }
+        public string ColdCallPhoneNumberListLeadNotes { get; set; }
+
+        public UserProfileModel userProfile { get; set; }
+
+        public List<ReviewPostModel> ReviewPosts { get; set; }
+        public List<AgentCommentModel> AgentComments { get; set; }
+
+
 
         //Add methods if any (update)
     }

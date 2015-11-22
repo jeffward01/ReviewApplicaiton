@@ -16,5 +16,11 @@ namespace ReviewApplication.CORE.Models
         public string PostTitle { get; set; }
         public string PostBody { get; set; }
         public string NumberOfLikes { get; set; }
+
+        public CompanyProfileModel Company { get; set; }
+        public InsuranceProfileAgentModel InsuranceAgent { get; set; }
+
+        public List<CompanyCommentModel> CompanyComments { get; set; }
+        public List<AgentCommentModel> AgentComments { get; set; }
     }
 }

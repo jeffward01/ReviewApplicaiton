@@ -14,7 +14,10 @@ namespace ReviewApplication.CORE.Models
         public string PostBody { get; set; }
         public int NumberOfLikes { get; set; }
 
-
+        public ReviewPostModel ReviewPost { get; set;
+        }
+        public List<AgentCommentModel> AgentComments { get; set; }
+        public List<CompanyCommentModel> CompanyComments { get; set; }
         //Add Vitrual Varibles
 
         //Add methods if any (update)

@@ -16,8 +16,10 @@ namespace ReviewApplication.CORE.Models
         public string AccountType { get; set; }
         public DateTime CreatedDate { get; set; }
 
-        //Add Vitrual Varibles
-
+       
+        //Add Either?
+        public InsuranceProfileAgentModel InsuranceAgentProfile { get; set; }
+        public CompanyProfileModel CompanyProfile { get; set; }
         //Add methods if any (update)
 
     }

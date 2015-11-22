@@ -44,7 +44,10 @@ namespace ReviewApplication.CORE.Models
         public string VenmoComments { get; set; }
         public string VenmoHandle { get; set; }
 
-        //Add ProductInformation (Leads Offered)
+        public UserProfileModel userProfile { get; set; }
+
+        public List<LeadProductModel> LeadProducts { get; set; }
+        public List<ReviewPostModel> ReviewPosts { get; set; }
 
         //Add Virtual Properties
 
