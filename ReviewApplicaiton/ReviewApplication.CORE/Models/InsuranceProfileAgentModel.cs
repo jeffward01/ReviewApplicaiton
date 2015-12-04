@@ -55,6 +55,7 @@ namespace ReviewApplication.CORE.Models
         public List<CommentModel> Comments { get; set; }
         public List<ReviewPostModel> ReviewPosts { get; set; }
 
+        public List<LeadTransactionModel> Transations { get; set; }
 
 
     }

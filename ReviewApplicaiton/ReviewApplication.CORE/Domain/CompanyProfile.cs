@@ -58,6 +58,8 @@ namespace ReviewApplication.CORE.Domain
         public virtual ICollection<LeadProduct> LeadProducts { get; set; }
         public virtual ICollection<ReviewPost> ReviewPosts { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<LeadTransaction> Transactions { get; set; }
+
 
         //Add methods (update)
         public void Update(CompanyProfileModel companyProfile)

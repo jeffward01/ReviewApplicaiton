@@ -31,8 +31,6 @@ namespace ReviewApplication.CORE.Models
 
         public string Price { get; set; }
         public string ProductNotes { get; set; }
-
-        public CompanyProfileModel Company { get; set; }
    
 
         //Add methods if any (update)

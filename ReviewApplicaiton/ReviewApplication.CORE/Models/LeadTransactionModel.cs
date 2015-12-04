@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace ReviewApplication.CORE.Models
 {
-    public class LeadPurchaseModel
+    public class LeadTransactionModel
     {
-        public DateTime PurchaseDate { get; set; }
-        public int LeadPurchaseID { get; set; }
+        public DateTime TransactionDate { get; set; }
+        public int LeadTransactionID { get; set; }
         public int CompanyProfileID { get; set; }
         public int LeadProductID { get; set; }
         public int InsuranceAgentProfileID { get; set; }
-        public int PurchasePrice { get; set; }
-        public string PurchaseNotes { get; set; }
+        public int TransactionPrice { get; set; }
+        public string TransactionNotes { get; set; }
 
         public CompanyProfileModel Company { get; set; }
         public LeadProductModel LeadProduct {get;set;}
