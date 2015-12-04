@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ReviewApplication.CORE;
+using ReviewApplication.CORE.Models;
 
 namespace ReviewApplication.CORE.Domain
 {
@@ -12,7 +14,6 @@ namespace ReviewApplication.CORE.Domain
         public int UserID { get; set; } // Forign Key
 
         public string ProfileName { get; set; }
-        public DateTime JoinDate { get; set; }
 
         // Change Terrortiory to list in the future
         public string Territory { get; set; }
@@ -20,7 +21,15 @@ namespace ReviewApplication.CORE.Domain
         public string TypeOfAgent { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string FullName { get; set; }
+
+        //Set Full Name
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
         public string Bio { get; set; }
         //Recommended Lead Companies a list?
         public string RecommendedLeadCompanies { get; set; }
@@ -54,7 +63,60 @@ namespace ReviewApplication.CORE.Domain
         public string ColdCallPhoneNumberListLeadNotes { get; set; }
         //Add Vitrual Varibles
 
-        //Add methods if any (update)
 
+        public virtual ICollection<ReviewPost> ReviewPosts { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
+
+
+        //Add methods if any (update)
+        public void Update(InsuranceProfileAgentModel insuranceProfileAgent)
+        {
+
+            InsuranceAgentID = insuranceProfileAgent.InsuranceAgentID;
+            UserID = insuranceProfileAgent.UserID;
+
+            ProfileName = insuranceProfileAgent.ProfileName;
+
+
+            // Change Terrortiory to list 
+            Territory = insuranceProfileAgent.Territory;
+            YearsOfExperience = insuranceProfileAgent.YearsOfExperience;
+            TypeOfAgent = insuranceProfileAgent.TypeOfAgent;
+            FirstName = insuranceProfileAgent.FirstName;
+            LastName = insuranceProfileAgent.LastName;
+            Bio = insuranceProfileAgent.Bio;
+            //Recommended Lead Companies a list?
+            RecommendedLeadCompanies = insuranceProfileAgent.RecommendedLeadCompanies;
+            //Reference LeadType?   (Types of Leads Used)
+            TypesOfLeadsUsed = insuranceProfileAgent.TypesOfLeadsUsed;
+            ProfilePictureURL = insuranceProfileAgent.ProfilePictureURL;
+            //Gravatar? Something special?
+            InsuranceForumsHandle = insuranceProfileAgent.InsuranceForumsHandle;
+            Gravatar = insuranceProfileAgent.Gravatar;
+            TwitterHandle = insuranceProfileAgent.TwitterHandle;
+            AgentWebsiteURL = insuranceProfileAgent.AgentWebsiteURL;
+            NumberOfReviewPosts = insuranceProfileAgent.NumberOfReviewPosts;
+            NumberOfLikesRecieved = insuranceProfileAgent.NumberOfLikesRecieved;
+            AverageQuanitityOfLeadsPurchasedPerWeek = insuranceProfileAgent.AverageQuanitityOfLeadsPurchasedPerWeek;
+            AverageQuanitityOfLeadsPurchasedPerMonth = insuranceProfileAgent.AverageQuanitityOfLeadsPurchasedPerMonth;
+
+            //Lead Preferance
+            TelemarketerLeads = insuranceProfileAgent.TelemarketerLeads;
+            TelemarketingLeadNotes = insuranceProfileAgent.TelemarketingLeadNotes;
+
+            MailLeads = insuranceProfileAgent.MailLeads;
+            MailLeadLeadNotes = insuranceProfileAgent.MailLeadLeadNotes;
+
+            Press1Leads = insuranceProfileAgent.Press1Leads;
+            Press1LeadNotes = insuranceProfileAgent.Press1LeadNotes;
+
+            InternetLeads = insuranceProfileAgent.InternetLeads;
+            InternetLeadNotes = insuranceProfileAgent.InternetLeadNotes;
+
+            ColdCallPhoneNumberLists = insuranceProfileAgent.ColdCallPhoneNumberLists;
+            ColdCallPhoneNumberListLeadNotes = insuranceProfileAgent.ColdCallPhoneNumberListLeadNotes;
+        }
+            
+        
     }
 }

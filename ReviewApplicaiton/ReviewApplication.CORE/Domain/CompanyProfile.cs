@@ -57,6 +57,7 @@ namespace ReviewApplication.CORE.Domain
         //Add Virtual Properties
         public virtual ICollection<LeadProduct> LeadProducts { get; set; }
         public virtual ICollection<ReviewPost> ReviewPosts { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
 
         //Add methods (update)
         public void Update(CompanyProfileModel companyProfile)

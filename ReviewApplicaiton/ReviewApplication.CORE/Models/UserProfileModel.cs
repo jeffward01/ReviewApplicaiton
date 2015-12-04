@@ -12,6 +12,7 @@ namespace ReviewApplication.CORE.Models
         public int UserID { get; set; } // Primary Key
 
         public string Email { get; set; }
+        public string ResetEmail { get; set; }
         public string Password { get; set; }
         public string AccountType { get; set; }
         public DateTime CreatedDate { get; set; }
