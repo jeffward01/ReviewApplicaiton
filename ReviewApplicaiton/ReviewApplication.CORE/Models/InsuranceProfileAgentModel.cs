@@ -33,8 +33,8 @@ namespace ReviewApplication.CORE.Models
         public string InsuranceForumsHandle { get; set; }
         public int NumberOfReviewPosts { get; set; }
         public int NumberOfLikesRecieved { get; set; }
-        public int AverageQuanitityOfLeadsPurchasedPerWeek { get; set; }
-        public int AverageQuanitityOfLeadsPurchasedPerMonth { get; set; }
+        public int AverageQuanitityOfLeadsTransactiondPerWeek { get; set; }
+        public int AverageQuanitityOfLeadsTransactiondPerMonth { get; set; }
 
         //Lead Preferance
         public bool TelemarketerLeads { get; set; }

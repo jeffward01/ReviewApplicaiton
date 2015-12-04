@@ -43,8 +43,8 @@ namespace ReviewApplication.CORE.Domain
         public string InsuranceForumsHandle { get; set; }
         public int NumberOfReviewPosts { get; set; }
         public int NumberOfLikesRecieved { get; set; }
-        public int AverageQuanitityOfLeadsPurchasedPerWeek { get; set; }
-        public int AverageQuanitityOfLeadsPurchasedPerMonth { get; set; }
+        public int AverageQuanitityOfLeadsTransactiondPerWeek { get; set; }
+        public int AverageQuanitityOfLeadsTransactiondPerMonth { get; set; }
 
         //Lead Preferance
         public bool TelemarketerLeads { get; set; }
@@ -97,8 +97,8 @@ namespace ReviewApplication.CORE.Domain
             AgentWebsiteURL = insuranceProfileAgent.AgentWebsiteURL;
             NumberOfReviewPosts = insuranceProfileAgent.NumberOfReviewPosts;
             NumberOfLikesRecieved = insuranceProfileAgent.NumberOfLikesRecieved;
-            AverageQuanitityOfLeadsPurchasedPerWeek = insuranceProfileAgent.AverageQuanitityOfLeadsPurchasedPerWeek;
-            AverageQuanitityOfLeadsPurchasedPerMonth = insuranceProfileAgent.AverageQuanitityOfLeadsPurchasedPerMonth;
+            AverageQuanitityOfLeadsTransactiondPerWeek = insuranceProfileAgent.AverageQuanitityOfLeadsTransactiondPerWeek;
+            AverageQuanitityOfLeadsTransactiondPerMonth = insuranceProfileAgent.AverageQuanitityOfLeadsTransactiondPerMonth;
 
             //Lead Preferance
             TelemarketerLeads = insuranceProfileAgent.TelemarketerLeads;
