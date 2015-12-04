@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
+using ReviewApplication.CORE.Domain;
 
 namespace ReviewApplication.CORE.Infrastructure
 {
@@ -15,5 +17,33 @@ namespace ReviewApplication.CORE.Infrastructure
         {
 
         }
+
+        public IDbSet<Comment> Comments { get; set; }
+        public IDbSet<CompanyProfile> CompanyProfiles { get; set; }
+        public IDbSet<InsuranceAgentProfile> InsuranceAgentProfiles { get; set; }
+        public IDbSet<LeadProduct> LeadProducts { get; set; }
+        public IDbSet<LeadTransaction> LeadTransactions { get; set; }
+        public IDbSet<ReviewPost> ReviewPosts { get; set; }
+        public IDbSet<UserProfile> UserProfiles { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+
+
+
+
+            base.OnModelCreating(modelBuilder);
+        }
+
+
+
+
+
+
+
+
+
+
+
     }
 }
