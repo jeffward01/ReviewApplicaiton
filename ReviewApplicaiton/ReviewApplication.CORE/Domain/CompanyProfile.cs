@@ -23,7 +23,6 @@ namespace ReviewApplication.CORE.Domain
         public string SkypeHandle { get; set; }
         public string WebsiteURL { get; set; }
         public string PictureLogoURL { get; set; }
-        public int CompanyRating { get; set; }
         public string Bio { get; set; }
         public string LeadNotes { get; set; }
         public string PaymentNotes { get; set; }
@@ -44,9 +43,18 @@ namespace ReviewApplication.CORE.Domain
         public string VenmoComments { get; set; }
         public string VenmoHandle { get; set; }
 
+        public int CompanyRating
+        {
+            get
+            {
+                return (int)Math.Round(ReviewPosts.Average(rp => rp.CompanyRating), 0);
+            }
+        }
+
         //Add ProductInformation (Leads Offered)
 
         //Add Virtual Properties
+        public virtual ICollection<ReviewPost> ReviewPosts { get; set; }
 
         //Add methods (update)
 

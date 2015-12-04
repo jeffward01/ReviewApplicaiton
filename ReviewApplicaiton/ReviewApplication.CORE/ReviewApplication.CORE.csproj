@@ -113,8 +113,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\AgentComment.cs" />
-    <Compile Include="Domain\CompanyComment.cs" />
+    <Compile Include="Domain\Comment.cs" />
     <Compile Include="Domain\CompanyProfile.cs" />
     <Compile Include="Domain\InsuranceAgentProfile.cs" />
     <Compile Include="Domain\LeadProduct.cs" />

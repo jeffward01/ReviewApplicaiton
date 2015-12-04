@@ -15,6 +15,8 @@ namespace ReviewApplication.CORE.Domain
         public int CompanyRating { get; set; }
         public string PostTitle { get; set; }
         public string PostBody { get; set; }
-        public string NumberOfLikes { get; set; }
+        public int NumberOfLikes { get; set; }
+
+        public virtual ICollection<Comment> Comments { get; set; }
     }
 }
