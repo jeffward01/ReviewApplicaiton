@@ -20,7 +20,7 @@ namespace ReviewApplication.CORE.Domain
         public virtual CompanyProfile CompanyProfile { get; set; }
         public virtual InsuranceAgentProfile InsuranceAgentProfile { get; set; }
 
-
+         
         //Add methods if any (update)
         public void Update(UserProfileModel UserProfile)
         {
