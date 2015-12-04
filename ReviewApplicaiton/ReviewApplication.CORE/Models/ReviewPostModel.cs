@@ -19,9 +19,10 @@ namespace ReviewApplication.CORE.Models
         public string PostBody { get; set; }
         public int NumberOfLikes { get; set; }
 
-        public CompanyProfileModel Company { get; set; }
-        public InsuranceProfileAgentModel InsuranceAgent { get; set; }
+        // I dont think these are needed
+        //public CompanyProfileModel Company { get; set; }
+        //public InsuranceProfileAgentModel InsuranceAgent { get; set; }
 
-        public CommentModel Comment { get; set; }
+        public List<CommentModel> Comments { get; set; }
     }
 }
