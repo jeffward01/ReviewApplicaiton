@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ReviewApplication.CORE.Models;
 
 namespace ReviewApplication.CORE.Domain
 {
@@ -16,10 +17,23 @@ namespace ReviewApplication.CORE.Domain
         public DateTime CreatedDate { get; set; }
 
         //Add Vitrual Varibles
+        public virtual CompanyProfile CompanyProfile { get; set; }
+        public virtual InsuranceAgentProfile InsuranceAgentProfile { get; set; }
+
 
         //Add methods if any (update)
+        public void Update(UserProfileModel UserProfile)
+        {
+            //If new user, CreatedDate = now.
+            if(UserProfile.UserID == 0)
+            {
+                CreatedDate = DateTime.Now;
+            }
 
-        
-        
+            Email = UserProfile.Email;
+            Password = UserProfile.Password;
+            AccountType = UserProfile.AccountType;
+            CreatedDate = UserProfile.CreatedDate;
+        }
     }
 }
