@@ -20,7 +20,6 @@ namespace ReviewApplication.CORE.Models
         public CompanyProfileModel Company { get; set; }
         public InsuranceProfileAgentModel InsuranceAgent { get; set; }
 
-        public List<CompanyCommentModel> CompanyComments { get; set; }
-        public List<AgentCommentModel> AgentComments { get; set; }
+        public CommentModel Comments { get; set; }
     }
 }

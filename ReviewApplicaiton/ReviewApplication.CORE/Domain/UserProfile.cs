@@ -32,6 +32,7 @@ namespace ReviewApplication.CORE.Domain
             }
 
             Email = UserProfile.Email;
+            ResetEmail = UserProfile.ResetEmail;
             Password = UserProfile.Password;
             AccountType = UserProfile.AccountType;
             CreatedDate = UserProfile.CreatedDate;

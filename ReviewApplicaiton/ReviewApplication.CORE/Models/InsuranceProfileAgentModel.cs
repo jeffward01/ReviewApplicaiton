@@ -12,7 +12,6 @@ namespace ReviewApplication.CORE.Models
         public int UserID { get; set; } // Forign Key
 
         public string ProfileName { get; set; }
-        public DateTime JoinDate { get; set; }
 
         // Change Terrortiory to list in the future
         public string Territory { get; set; }
@@ -60,6 +59,5 @@ namespace ReviewApplication.CORE.Models
 
 
 
-        //Add methods if any (update)
     }
 }
