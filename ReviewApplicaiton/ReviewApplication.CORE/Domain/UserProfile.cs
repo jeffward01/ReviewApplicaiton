@@ -15,6 +15,7 @@ namespace ReviewApplication.CORE.Domain
         public string ResetEmail { get; set; }
         public string Password { get; set; }
         public string AccountType { get; set; }
+        public string Industry { get; set; }
         public DateTime CreatedDate { get; set; }
 
         //Add Vitrual Varibles

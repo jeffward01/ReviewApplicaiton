@@ -11,6 +11,7 @@ namespace ReviewApplication.CORE.Models
         public int LeadProductID { get; set; } //Primary Key
         public int CompanyID { get; set; } //Forign Key
 
+        public string OrderLink { get; set; }
 
         //Lead Type
         public bool TelemarketingLead { get; set; }

@@ -48,10 +48,9 @@ namespace ReviewApplication.CORE.Models
 
         public List<LeadProductModel> LeadProducts { get; set; }
         public List<ReviewPostModel> ReviewPosts { get; set; }
+        public List<CommentModel> Comments { get; set; }
 
-        //Add Virtual Properties
-
-        //Add methods (update)
+     
 
 
 

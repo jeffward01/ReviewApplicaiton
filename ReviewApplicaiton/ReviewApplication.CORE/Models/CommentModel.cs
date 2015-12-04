@@ -17,8 +17,7 @@ namespace ReviewApplication.CORE.Models
         public int NumberOfLikes { get; set; }
 
         public IList<CommentModel> Comments { get; set; }
-        public CompanyProfileModel CompanyProfile { get; set; }
-        public InsuranceProfileAgentModel InsuranceAgent { get; set; }
+      
 
     }
 }

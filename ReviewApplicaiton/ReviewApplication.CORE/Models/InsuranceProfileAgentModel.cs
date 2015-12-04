@@ -52,10 +52,9 @@ namespace ReviewApplication.CORE.Models
         public bool ColdCallPhoneNumberLists { get; set; }
         public string ColdCallPhoneNumberListLeadNotes { get; set; }
 
-        public UserProfileModel userProfile { get; set; }
 
+        public List<CommentModel> Comments { get; set; }
         public List<ReviewPostModel> ReviewPosts { get; set; }
-        public List<AgentCommentModel> AgentComments { get; set; }
 
 
 

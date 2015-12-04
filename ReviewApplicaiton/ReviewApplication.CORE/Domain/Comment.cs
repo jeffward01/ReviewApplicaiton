@@ -19,6 +19,9 @@ namespace ReviewApplication.CORE.Domain
         public int NumberOfLikes { get; set; }
 
         //Set Virtual varibles
+        public virtual InsuranceProfileAgentModel InsuranceAgentProfile { get; set; }
+        public virtual CompanyProfile CompanyProfile { get; set; }
+
 
         //any Methods? Update
         public void Update(CommentModel comment)
