@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReviewApplication.CORE.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,7 @@ namespace ReviewApplication.CORE.Domain
         public string Bio { get; set; }
         public string LeadNotes { get; set; }
         public string PaymentNotes { get; set; }
-        
+
         //Payment Area  || Stripe?
         public bool AcceptsCredit { get; set; }
         public string CreditComments { get; set; }
@@ -54,10 +55,49 @@ namespace ReviewApplication.CORE.Domain
         //Add ProductInformation (Leads Offered)
 
         //Add Virtual Properties
+        public virtual ICollection<LeadProduct> LeadProducts { get; set; }
         public virtual ICollection<ReviewPost> ReviewPosts { get; set; }
 
         //Add methods (update)
+        public void Update(CompanyProfileModel companyProfile)
+        {
+            CompanyID = companyProfile.CompanyID;
+            UserID = companyProfile.UserID;
+            CompanyName = companyProfile.CompanyName;
+            Address1 = companyProfile.Address1;
+            Address2 = companyProfile.Address2;
+            State = companyProfile.State;
+            City = companyProfile.State;
+            Zip = companyProfile.Zip;
+            TelephoneNumber = companyProfile.TelephoneNumber;
+            OtherTelephoneNumber = companyProfile.OtherTelephoneNumber;
+            EmailAddress = companyProfile.EmailAddress;
+            SkypeHandle = companyProfile.SkypeHandle;
+            WebsiteURL = companyProfile.WebsiteURL;
+            PictureLogoURL = companyProfile.PictureLogoURL;
+            Bio = companyProfile.Bio;
+            LeadNotes = companyProfile.LeadNotes;
+            PaymentNotes = companyProfile.PaymentNotes;
 
+            //Payment Area  || Stripe?
+            AcceptsCredit = companyProfile.AcceptsCredit;
+            CreditComments = companyProfile.CreditComments;
+            AcceptsDebit = companyProfile.AcceptsDebit;
+            DebitComments = companyProfile.DebitComments;
+            AcceceptsAmericanExpress = companyProfile.AcceceptsAmericanExpress;
+            AmericanExpressComments = companyProfile.AmericanExpressComments;
+            AcceptsPaypal = companyProfile.AcceptsPaypal;
+            PaypalEmailAddress = companyProfile.PaypalEmailAddress;
+            PaypalComments = companyProfile.PaypalComments;
+            AcceptsMoneyOrder = companyProfile.AcceptsMoneyOrder;
+            MoneyOrderComments = companyProfile.MoneyOrderComments;
+            AcceptsVenmo = companyProfile.AcceptsVenmo;
+            VenmoComments = companyProfile.VenmoComments;
+            VenmoHandle = companyProfile.VenmoHandle;
+
+            
+        }
+        
 
      
 
