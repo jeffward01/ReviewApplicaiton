@@ -117,19 +117,21 @@
     <Compile Include="Domain\CompanyProfile.cs" />
     <Compile Include="Domain\InsuranceAgentProfile.cs" />
     <Compile Include="Domain\LeadProduct.cs" />
+    <Compile Include="Domain\LeadTransaction.cs" />
     <Compile Include="Domain\ReviewPost.cs" />
     <Compile Include="Domain\UserProfile.cs" />
     <Compile Include="Infrastructure\AuthRepository.cs" />
-    <Compile Include="Models\AgentCommentModel.cs" />
-    <Compile Include="Models\CompanyCommentModel.cs" />
+    <Compile Include="Infrastructure\IReviewApplicationDbContext.cs" />
+    <Compile Include="Infrastructure\ReviewApplicationDbContext.cs" />
+    <Compile Include="Models\CommentModel.cs" />
     <Compile Include="Models\CompanyProfileModel.cs" />
     <Compile Include="Models\InsuranceProfileAgentModel.cs" />
     <Compile Include="Models\LeadProductModel.cs" />
+    <Compile Include="Models\LeadTransactionModel.cs" />
     <Compile Include="Models\ReviewPostModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\UserProfileModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReviewApplicationDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -28,7 +28,7 @@ namespace ReviewApplication.CORE.Infrastructure
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
+            //Map classes here
 
 
 

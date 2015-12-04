@@ -49,6 +49,7 @@ namespace ReviewApplication.CORE.Domain
             get
             {
                 return (int)Math.Round(ReviewPosts.Average(rp => rp.CompanyRating), 0);
+              
             }
         }
 

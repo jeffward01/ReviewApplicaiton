@@ -13,7 +13,7 @@ namespace ReviewApplication.CORE.Models
         public int InsuranceAgentID { get; set; } // Foriegn Key
         public DateTime ReviewPostDate { get; set; }
 
-        public int? CompanyRating { get; set; }
+        public int CompanyRating { get; set; }
         public int? AgentRating { get; set; }
         public string PostTitle { get; set; }
         public string PostBody { get; set; }
