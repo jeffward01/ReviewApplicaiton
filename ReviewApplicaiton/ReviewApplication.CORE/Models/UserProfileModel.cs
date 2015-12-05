@@ -13,7 +13,7 @@ namespace ReviewApplication.CORE.Models
 
         public string Email { get; set; }
         public string ResetEmail { get; set; }
-        public string Industry { get; set; }
+        public List<string> Industry { get; set; }
         public string Password { get; set; }
         public string AccountType { get; set; }
         public DateTime CreatedDate { get; set; }
