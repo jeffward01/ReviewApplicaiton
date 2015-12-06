@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReviewApplication.CORE.Models
 {
-    public class UserProfileModel
+    public class UserProfileModel 
     {
 
         public int UserID { get; set; } // Primary Key

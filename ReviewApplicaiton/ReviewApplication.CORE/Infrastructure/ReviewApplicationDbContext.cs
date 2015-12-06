@@ -44,16 +44,57 @@ namespace ReviewApplication.CORE.Infrastructure
                                                 .WithRequired(c => c.ReviewPost)
                                                 .HasForeignKey(rp => rp.ReviewID);
 
-
-            //Map to Comments to Comments
+            //Map Comments to Comments
+            //Needs work?
             modelBuilder.Entity<Comment>().HasKey(c => c.CommentID);
-            modelBuilder.Entity<Comment>().
-
+            modelBuilder.Entity<Comment>().HasMany(c => c.Comments)
+                                            .WithMany();
 
 
             //Map CompanyProfile to Transactions
+            modelBuilder.Entity<LeadTransaction>().HasKey(lt => lt.LeadTransactionID);
+            modelBuilder.Entity<LeadTransaction>().HasRequired(c => c.Company)
+                                                    .WithMany(lt => lt.Transactions)
+                                                    .HasForeignKey(c => c.CompanyID);
 
-            
+            //Map InsuranceAgent to Transactions
+            modelBuilder.Entity<LeadTransaction>().HasRequired(a => a.Agent)
+                                                .WithMany(lt => lt.Transactions)
+                                                .HasForeignKey(a => a.InsuranceAgentProfileID);
+
+            //Map UserProfile to CompanyProfile
+            modelBuilder.Entity<UserProfile>().HasKey(up => up.UserID);
+            modelBuilder.Entity<UserProfile>().HasOptional(c => c.CompanyProfile)
+                                            .WithRequired(cp => cp.UserProfile);
+
+            //Map UserProfule to InsuranceAgentPRofile
+            modelBuilder.Entity<UserProfile>().HasOptional(ia => ia.InsuranceAgentProfile)
+                                                .WithRequired(ia => ia.UserProfile);
+
+            /*
+            //Map UserProfile to CompanyProfile ??
+            modelBuilder.Entity<CompanyProfile>().HasKey(c => c.CompanyID);
+            modelBuilder.Entity<CompanyProfile>().HasRequired(u => u.UserProfile)
+                                        .WithOptional(cp => cp.CompanyProfile)
+                                          .Map(m => m.MapKey("CompanyID"));
+
+            //Map Userprofile to InsuranceAgentProfile ??
+            modelBuilder.Entity<InsuranceAgentProfile>().HasKey(a => a.UserID);
+            modelBuilder.Entity<UserProfile>().HasOptional(u => u.InsuranceAgentProfile)
+                                        .WithRequired(ap => ap.UserProfile);
+
+    */
+            //Map Company to comments
+            modelBuilder.Entity<Comment>().HasKey(c => c.CommentID);
+            modelBuilder.Entity<CompanyProfile>().HasMany(c => c.Comments)
+                                    .WithOptional(c => c.CompanyProfile)
+                                    .HasForeignKey(cp => cp.CommentID);
+
+            //Map InsuranceAgentProfile to Comments
+            modelBuilder.Entity<InsuranceAgentProfile>().HasMany(c => c.Comments)
+                                            .WithOptional(c => c.InsuranceAgentProfile)
+                                            .HasForeignKey(c => c.CommentID);
+
 
 
 

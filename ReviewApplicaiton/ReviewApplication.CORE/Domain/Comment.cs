@@ -20,10 +20,11 @@ namespace ReviewApplication.CORE.Domain
         public int NumberOfLikes { get; set; }
 
         //Set Virtual varibles
-        public virtual InsuranceProfileAgentModel InsuranceAgentProfile { get; set; }
+        public virtual InsuranceAgentProfile InsuranceAgentProfile { get; set; }
         public virtual CompanyProfile CompanyProfile { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ReviewPost ReviewPost { get; set; }
+        
 
 
         //any Methods? Update

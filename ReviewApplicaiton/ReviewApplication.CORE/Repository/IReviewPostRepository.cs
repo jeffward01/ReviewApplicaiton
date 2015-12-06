@@ -1,0 +1,15 @@
+﻿using ReviewApplication.CORE.Domain;
+using ReviewApplication.CORE.Infrastructure;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ReviewApplication.CORE.Repository
+{
+    public interface IReviewPostRepository : IRepository<ReviewPost>
+    {
+
+    } 
+}

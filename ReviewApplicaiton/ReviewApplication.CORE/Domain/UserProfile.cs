@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ReviewApplication.CORE.Models;
+using Microsoft.AspNet.Identity;
 
 namespace ReviewApplication.CORE.Domain
 {
-   public class UserProfile
+   public class UserProfile : IUserProfile<int>
     {
         public int UserID { get; set; } // Primary Key
 
