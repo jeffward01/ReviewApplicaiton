@@ -25,7 +25,7 @@ namespace ReviewApplication.Data.Infrastructure
         public IDbSet<LeadProduct> LeadProducts { get; set; }
         public IDbSet<LeadTransaction> LeadTransactions { get; set; }
         public IDbSet<ReviewPost> ReviewPosts { get; set; }
-        public IDbSet<UserProfile> UserProfiles { get; set; }
+        public IDbSet<User> UserProfiles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -64,12 +64,12 @@ namespace ReviewApplication.Data.Infrastructure
                                                 .HasForeignKey(a => a.InsuranceAgentProfileID);
 
             //Map UserProfile to CompanyProfile
-            modelBuilder.Entity<UserProfile>().HasKey(up => up.UserID);
-            modelBuilder.Entity<UserProfile>().HasOptional(c => c.CompanyProfile)
+            modelBuilder.Entity<User>().HasKey(up => up.UserID);
+            modelBuilder.Entity<User>().HasOptional(c => c.CompanyProfile)
                                             .WithRequired(cp => cp.UserProfile);
 
             //Map UserProfule to InsuranceAgentPRofile
-            modelBuilder.Entity<UserProfile>().HasOptional(ia => ia.InsuranceAgentProfile)
+            modelBuilder.Entity<User>().HasOptional(ia => ia.InsuranceAgentProfile)
                                                 .WithRequired(ia => ia.UserProfile);
 
             /*

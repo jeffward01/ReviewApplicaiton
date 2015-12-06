@@ -48,7 +48,7 @@ namespace ReviewApplication.API
             Mapper.CreateMap<LeadProduct, LeadProductModel>();
             Mapper.CreateMap<LeadTransaction, LeadTransactionModel>();
             Mapper.CreateMap<ReviewPost, ReviewPostModel>();
-            Mapper.CreateMap<UserProfile, UserProfileModel>();
+            Mapper.CreateMap<User, UserModel>();
             
         }
     }

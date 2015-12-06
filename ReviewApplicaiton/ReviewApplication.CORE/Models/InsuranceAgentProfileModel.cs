@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReviewApplication.CORE.Models
 {
-    public class InsuranceProfileAgentModel
+    public class InsuranceAgentProfileModel
     {
         public int InsuranceAgentID { get; set; } // Primary Key
         public int UserID { get; set; } // Forign Key

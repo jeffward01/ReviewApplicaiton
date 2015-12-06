@@ -11,8 +11,8 @@ namespace ReviewApplication.CORE.Repository
 {
   public interface IAuthRepository : IDisposable
     {
-        Task<IdentityResult> RegisterUser(UserModel userModel);
-        Task<UserProfile> FindUser(string userName, string password);
+        Task<IdentityResult> RegisterUser(RegistrationModel userModel);
+        Task<User> FindUser(string userName, string password);
     }
 }
 

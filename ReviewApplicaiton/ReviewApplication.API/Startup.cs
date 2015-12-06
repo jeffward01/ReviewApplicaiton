@@ -14,6 +14,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 [assembly: OwinStartup(typeof(ReviewApplication.API.Startup))]
 namespace ReviewApplication.API
@@ -41,9 +43,32 @@ namespace ReviewApplication.API
 
             container.Options.DefaultScopedLifestyle = new ExecutionContextScopeLifestyle();
 
-            container.Register<UserStore<UserProfile, int>, userStore>(Lifestyle.Scoped);
+            container.Register<IUserStore<User, int>, UserStore>(Lifestyle.Scoped);
+
+            container.Register<IDatabaseFactory, DatabaseFactory>(Lifestyle.Scoped);
+
+            container.Register<IUnitOfWork, UnitOfWork>();
+
+            container.Register<IAuthRepository, AuthRepository>();
+            container.Register<ICommentRepository, CommentReposito>();
+            container.Register<IUserRepository, UserRepository>();
+            container.Register<ICompanyRepository, CompanyRepository>();
+            container.Register<IInsuranceAgentProfileRepository, InsuranceAgentProfileRepository>();
+            container.Register<ILeadProductRepository, LeadProductRepository>();
+            container.Register<ILeadTransactionRepository, LeadTransactionRepository>();
+            container.Register<IReviewPostRepository, ReviewPostRepository>();
 
 
+            app.Use(async (context, next) => {
+                    using (container.BeginExecutionContextScope())
+                    {
+                        await next();
+                    }
+                });
+
+            container.Verify();
+
+            return container;
         }
 
 
@@ -64,6 +89,6 @@ namespace ReviewApplication.API
             app.UseOAuthAuthorizationServer(OAuthServerOptions);
             app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
             */
-        }
+        
     }
 }

@@ -9,6 +9,35 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewApplication.CORE", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewApplication.API.TEST", "ReviewApplication.API.TEST\ReviewApplication.API.TEST.csproj", "{3B797428-7297-4B86-8EC0-3475035672D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewApplication.DATA", "ReviewApplication.DATA\ReviewApplication.DATA.csproj", "{AD943E11-DFF2-425E-A87F-0F68AD38AEF9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A5123167-675F-48C8-BA25-9BC72CBA4491} = {A5123167-675F-48C8-BA25-9BC72CBA4491}
+		{37CFE397-3327-4EB2-AA51-87F97ED08BBB} = {37CFE397-3327-4EB2-AA51-87F97ED08BBB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewApplication.SQL", "ReviewApplication.SQL\ReviewApplication.SQL.csproj", "{F65BB4E2-BCB6-4D76-AADF-E428DB4CF334}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ReviewApplication.CLIENT", "ReviewApplication.CLIENT\", "{AAA0D0AD-364F-49C9-A39B-9999B7A7FDD6}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54096"
+		Debug.AspNetCompiler.PhysicalPath = "ReviewApplication.CLIENT\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54096\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54096"
+		Release.AspNetCompiler.PhysicalPath = "ReviewApplication.CLIENT\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54096\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54096"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +56,18 @@ Global
 		{3B797428-7297-4B86-8EC0-3475035672D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B797428-7297-4B86-8EC0-3475035672D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B797428-7297-4B86-8EC0-3475035672D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD943E11-DFF2-425E-A87F-0F68AD38AEF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD943E11-DFF2-425E-A87F-0F68AD38AEF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD943E11-DFF2-425E-A87F-0F68AD38AEF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD943E11-DFF2-425E-A87F-0F68AD38AEF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F65BB4E2-BCB6-4D76-AADF-E428DB4CF334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F65BB4E2-BCB6-4D76-AADF-E428DB4CF334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F65BB4E2-BCB6-4D76-AADF-E428DB4CF334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F65BB4E2-BCB6-4D76-AADF-E428DB4CF334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAA0D0AD-364F-49C9-A39B-9999B7A7FDD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA0D0AD-364F-49C9-A39B-9999B7A7FDD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA0D0AD-364F-49C9-A39B-9999B7A7FDD6}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA0D0AD-364F-49C9-A39B-9999B7A7FDD6}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

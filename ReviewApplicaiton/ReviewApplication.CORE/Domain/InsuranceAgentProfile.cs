@@ -74,10 +74,10 @@ namespace ReviewApplication.CORE.Domain
         public virtual ICollection<LeadTransaction> Transactions { get; set; }
 
         //Can only have 1 userProfile
-        public virtual UserProfile UserProfile { get; set; }
+        public virtual User UserProfile { get; set; }
 
         //Add methods if any (update)
-        public void Update(InsuranceProfileAgentModel insuranceProfileAgent)
+        public void Update(InsuranceAgentProfileModel insuranceProfileAgent)
         {
 
             InsuranceAgentID = insuranceProfileAgent.InsuranceAgentID;

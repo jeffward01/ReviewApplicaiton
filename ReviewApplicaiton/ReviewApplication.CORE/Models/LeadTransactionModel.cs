@@ -18,6 +18,6 @@ namespace ReviewApplication.CORE.Models
 
         public CompanyProfileModel Company { get; set; }
         public LeadProductModel LeadProduct {get;set;}
-        public InsuranceProfileAgentModel InsuranceAgent { get; set; }
+        public InsuranceAgentProfileModel InsuranceAgent { get; set; }
     }
 }

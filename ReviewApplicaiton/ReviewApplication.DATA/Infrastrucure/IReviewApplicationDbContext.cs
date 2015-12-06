@@ -16,7 +16,7 @@ namespace ReviewApplication.CORE.Infrastructure
         IDbSet<LeadProduct> LeadProducts { get; set; }
         IDbSet<LeadTransaction> LeadTransactions { get; set; }
         IDbSet<ReviewPost> ReviewPosts { get; set; }
-        IDbSet<UserProfile> UserProfiles { get; set; }
+        IDbSet<User> UserProfiles { get; set; }
 
         int SaveChanges();
     }

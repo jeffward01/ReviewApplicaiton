@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ReviewApplication.DATA.Repository
 {
-    public class UserProfileRepository : Respositry<UserProfile>, IUserProfileRepository
+    public class UserProfileRepository : Respositry<User>, IUserRepository
     {
         public UserProfileRepository(IDatabaseFactory databaseFactory) : base(databaseFactory)
         { }
