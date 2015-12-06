@@ -17,7 +17,9 @@ namespace ReviewApplication.CORE.Domain
 
         public string  Email { get; set; }
         public string ResetEmail { get; set; }
-        public string Password { get; set; }
+        public string UserName { get; set; }
+        public string PasswordHash { get; set; }
+        public string SecurityStamp { get; set; }
         public string AccountType { get; set; }
         public List<string> Industry { get; set; }
         public DateTime CreatedDate { get; set; }
@@ -38,7 +40,9 @@ namespace ReviewApplication.CORE.Domain
 
             Email = UserProfile.Email;
             ResetEmail = UserProfile.ResetEmail;
-            Password = UserProfile.Password;
+            PasswordHash = UserProfile.PasswordHash;
+            UserName = UserProfile.UserName;
+            SecurityStamp = UserProfile.SecurityStamp;
             AccountType = UserProfile.AccountType;
             Industry = UserProfile.Industry;
             CreatedDate = UserProfile.CreatedDate;

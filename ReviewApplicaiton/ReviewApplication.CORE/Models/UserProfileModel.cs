@@ -14,7 +14,9 @@ namespace ReviewApplication.CORE.Models
         public string Email { get; set; }
         public string ResetEmail { get; set; }
         public List<string> Industry { get; set; }
-        public string Password { get; set; }
+        public string UserName { get; set; }
+        public string PasswordHash { get; set; }
+        public string SecurityStamp { get; set; }
         public string AccountType { get; set; }
         public DateTime CreatedDate { get; set; }
 

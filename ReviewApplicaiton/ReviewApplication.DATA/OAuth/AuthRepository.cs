@@ -2,51 +2,65 @@
 using Microsoft.AspNet.Identity.EntityFramework;
 using ReviewApplication.API.Models;
 using ReviewApplication.CORE.Infrastructure;
+using ReviewApplication.CORE.Repository;
+using ReviewApplication.CORE.Models;
+using ReviewApplication.CORE.Domain;
 using ReviewApplication.Data.Infrastructure;
+using ReviewApplication.CORE.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReviewApplication.API
+namespace ReviewApplication.Data.OAuth
 {
-    public class AuthRepository : IDisposable
+    public class AuthRepository : IAuthRepository, IDisposable
     {
-        private ReviewApplicationDbContext _ctx;
-
-        private UserManager<IdentityUser> _userManager;
-
-        public AuthRepository()
         {
-            _ctx = new ReviewApplicationDbContext();
-            _userManager = new UserManager<IdentityUser>(new UserStore<IdentityUser>(_ctx));
+        private readonly IDatabaseFactory _databaseFactory;
+        private UserManager<User, int> _userManager;
+        private readonly IUserStore<User, int> _userStore;
+
+        private ReviewApplicationDbContext _dataContext;
+        protected ReviewApplicationDbContext DataContext
+        {
+            get
+            {
+                return _dataContext ?? (_dataContext = _databaseFactory.GetDataContext());
+            }
         }
 
-        public async Task<IdentityResult> RegisterUser(UserModel userModel)
+        public AuthRepository(IDatabaseFactory databaseFactory, IUserStore<User, int> userStore)
         {
-            IdentityUser user = new IdentityUser
+            _userStore = userStore;
+            _databaseFactory = databaseFactory;
+            _userManager = new UserManager<User, int>(userStore);
+        }
+
+        public async Task<IdentityResult> RegisterUser(RegistrationModel registrationModel)
+        {
+            User user = new User
             {
-                UserName = userModel.UserName
+                UserName = registrationModel.UserName
             };
 
-            var result = await _userManager.CreateAsync(user, userModel.Password);
+            var result = await _userManager.CreateAsync(user, registrationModel.Password);
 
             return result;
         }
 
-        public async Task<IdentityUser> FindUser(string userName, string password)
+        public async Task<User> FindUser(string userName, string password)
         {
-            IdentityUser user = await _userManager.FindAsync(userName, password);
+            return await _userManager.FindAsync(userName, password);
 
-            return user;
         }
 
         public void Dispose()
         {
-            _ctx.Dispose();
             _userManager.Dispose();
 
         }
     }
+
 }
