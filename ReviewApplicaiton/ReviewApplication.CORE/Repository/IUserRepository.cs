@@ -8,7 +8,7 @@ using ReviewApplication.CORE.Infrastructure;
 
 namespace ReviewApplication.CORE.Repository
 {
-    public interface IUserProfileRepository : IRepository<UserProfile>
+    public interface IUserRepository : IRepository<User>
     {
     }
 }

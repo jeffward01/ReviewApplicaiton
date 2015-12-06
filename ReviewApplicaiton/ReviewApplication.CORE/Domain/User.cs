@@ -11,7 +11,7 @@ using ReviewApplication.CORE.Domain;
 
 namespace ReviewApplication.CORE.Domain
 {
-   public class UserProfile : IUser<int>
+   public class User : IUser<int>
     {
         public int UserID { get; set; } // Primary Key
 
@@ -30,7 +30,7 @@ namespace ReviewApplication.CORE.Domain
 
          
         //Add methods if any (update)
-        public void Update(UserProfileModel UserProfile)
+        public void Update(UserModel UserProfile)
         {
             //If new user, CreatedDate = now.
             if(UserProfile.UserID == 0)
