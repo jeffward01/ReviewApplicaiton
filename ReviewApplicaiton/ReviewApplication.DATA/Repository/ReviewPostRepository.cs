@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ReviewApplication.CORE.Domain;
+using ReviewApplication.CORE.Repository;
+using ReviewApplication.DATA.Infrastrucure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

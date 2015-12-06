@@ -12,12 +12,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ReviewApplication.DATA.Infrastrucure;
 
 namespace ReviewApplication.Data.OAuth
 {
     public class AuthRepository : IAuthRepository, IDisposable
     {
-        {
+        
         private readonly IDatabaseFactory _databaseFactory;
         private UserManager<User, int> _userManager;
         private readonly IUserStore<User, int> _userStore;

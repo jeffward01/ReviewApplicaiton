@@ -1,7 +1,11 @@
-﻿using System;
+﻿using AutoMapper;
+using ReviewApplication.CORE.Domain;
+using ReviewApplication.CORE.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ReviewApplication.API
 {
@@ -10,6 +14,13 @@ namespace ReviewApplication.API
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            // Enable cross origin requests to API
+            var cors = new EnableCorsAttribute(
+                origins: "*",
+                headers: "*",
+                methods: "*"
+            );
+            config.EnableCors(cors);
 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -20,7 +31,7 @@ namespace ReviewApplication.API
                 defaults: new { id = RouteParameter.Optional }
             );
 
-
+            //Remove XML format inorder to return JSON
             var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
             config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
 
@@ -28,18 +39,17 @@ namespace ReviewApplication.API
 
         }
 
+
         private static void SetupAutomapper()
-        {
-            /*
-            Mapper.CreateMap<Appointment, AppointmentModel>();
-            Mapper.CreateMap<Doctor, DoctorModel>();
-            Mapper.CreateMap<DoctorCheck, DoctorCheckModel>();
-            Mapper.CreateMap<EmergencyContact, EmergencyContactModel>();
-            Mapper.CreateMap<ExamRoom, ExamRoomModel>();
-            Mapper.CreateMap<Patient, PatientModel>();
-            Mapper.CreateMap<PatientCheck, PatientCheckModel>();
-            Mapper.CreateMap<Specialty, SpecialtyModel>();
-            */
+        {   
+            Mapper.CreateMap<Comment, CommentModel>();
+            Mapper.CreateMap<CompanyProfile, CompanyProfileModel>();
+            Mapper.CreateMap<InsuranceAgentProfile, InsuranceAgentProfileModel>();
+            Mapper.CreateMap<LeadProduct, LeadProductModel>();
+            Mapper.CreateMap<LeadTransaction, LeadTransactionModel>();
+            Mapper.CreateMap<ReviewPost, ReviewPostModel>();
+            Mapper.CreateMap<UserProfile, UserProfileModel>();
+            
         }
     }
 }
