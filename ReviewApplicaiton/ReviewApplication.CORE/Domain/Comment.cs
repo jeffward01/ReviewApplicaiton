@@ -12,7 +12,8 @@ namespace ReviewApplication.CORE.Domain
     {
         public int CommentID { get; set; }
         public DateTime CommentDate { get; set; }
-        public int ReviewID { get; set; }
+
+        public int ReviewID { get; set; } // Foriegn Key 
         public int? InsuranceAgentID { get; set; }
         public int? CompanyID { get; set; }
         public string PostBody { get; set; }
@@ -21,6 +22,8 @@ namespace ReviewApplication.CORE.Domain
         //Set Virtual varibles
         public virtual InsuranceProfileAgentModel InsuranceAgentProfile { get; set; }
         public virtual CompanyProfile CompanyProfile { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ReviewPost ReviewPost { get; set; }
 
 
         //any Methods? Update

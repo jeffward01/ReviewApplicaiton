@@ -28,7 +28,33 @@ namespace ReviewApplication.CORE.Infrastructure
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //Map classes here
+            //Map Review post to Comapny
+            modelBuilder.Entity<ReviewPost>().HasKey(rp => rp.ReviewPostID);
+            modelBuilder.Entity<ReviewPost>().HasRequired(c => c.Company)
+                                                .WithMany(rp => rp.ReviewPosts)
+                                                .HasForeignKey(c => c.CompanyID);
+
+            //Map Review post to Agent
+            modelBuilder.Entity<ReviewPost>().HasRequired(a => a.InsuranceAgent)
+                                        .WithMany(rp => rp.ReviewPosts)
+                                        .HasForeignKey(a => a.InsuranceAgentID);
+
+            //Map Review Post to Comments
+            modelBuilder.Entity<ReviewPost>().HasMany(c => c.Comments)
+                                                .WithRequired(c => c.ReviewPost)
+                                                .HasForeignKey(rp => rp.ReviewID);
+
+
+            //Map to Comments to Comments
+            modelBuilder.Entity<Comment>().HasKey(c => c.CommentID);
+            modelBuilder.Entity<Comment>().
+
+
+
+            //Map CompanyProfile to Transactions
+
+            
+
 
 
 

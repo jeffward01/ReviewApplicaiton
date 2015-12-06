@@ -5,13 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using ReviewApplication.CORE;
 using ReviewApplication.CORE.Models;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace ReviewApplication.CORE.Domain
 {
     public class InsuranceAgentProfile
     {
-        public int InsuranceAgentID { get; set; } // Primary Key
+        [Key, ForeignKey("UserProfile")]
         public int UserID { get; set; } // Forign Key
+
+        public int InsuranceAgentID { get; set; } // Primary Key
 
         public string ProfileName { get; set; }
 
@@ -67,6 +71,7 @@ namespace ReviewApplication.CORE.Domain
         public virtual ICollection<ReviewPost> ReviewPosts { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<LeadTransaction> Transactions { get; set; }
+        public virtual UserProfile UserProfile { get; set; }
 
         //Add methods if any (update)
         public void Update(InsuranceProfileAgentModel insuranceProfileAgent)

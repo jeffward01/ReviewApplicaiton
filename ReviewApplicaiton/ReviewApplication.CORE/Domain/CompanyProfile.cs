@@ -1,6 +1,8 @@
 ﻿using ReviewApplication.CORE.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,8 +11,10 @@ namespace ReviewApplication.CORE.Domain
 {
     public class CompanyProfile
     {
-        public int CompanyID { get; set; } //Primary Key
+        [Key, ForeignKey("UserProfile")]
         public int UserID { get; set; }  // Foreign Key
+
+        public int CompanyID { get; set; } //Primary Key
 
         public string CompanyName { get; set; }
         public string Address1 { get; set; }
@@ -60,6 +64,7 @@ namespace ReviewApplication.CORE.Domain
         public virtual ICollection<ReviewPost> ReviewPosts { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<LeadTransaction> Transactions { get; set; }
+        public virtual UserProfile UserProfile { get; set; }
 
 
         //Add methods (update)

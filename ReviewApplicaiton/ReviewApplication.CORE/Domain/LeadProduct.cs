@@ -1,6 +1,8 @@
 ﻿using ReviewApplication.CORE.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,10 +11,12 @@ namespace ReviewApplication.CORE.Domain
 {
     public class LeadProduct
     {
-        public int LeadProductID { get; set; } //Primary Key
+        [Key, ForeignKey("CompanyProfile")]
         public int CompanyID { get; set; } //Forign Key
 
-       
+        public int LeadProductID { get; set; } //Primary Key
+
+
         public string Price { get; set; }
         public string ProductNotes { get; set; }
         public string OrderLink { get; set; }

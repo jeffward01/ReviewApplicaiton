@@ -1,6 +1,8 @@
 ﻿using ReviewApplication.CORE.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +11,12 @@ namespace ReviewApplication.CORE.Domain
 {
    public class LeadTransaction
     {
+
+        [Key, ForeignKey("CompanyProfile")]
+        public int CompanyID { get; set; } //Forign Key
+
         public DateTime TransactionDate { get; set; }
-        public int LeadTransactionID { get; set; }
-        public int CompanyProfileID { get; set; }
+        public int LeadTransactionID { get; set; } // Primary Key
         public int LeadProductID { get; set; }
         public int InsuranceAgentProfileID { get; set; }
         public int TransactionPrice { get; set; }
