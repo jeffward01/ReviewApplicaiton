@@ -68,9 +68,12 @@ namespace ReviewApplication.CORE.Domain
         //Add Vitrual Varibles
 
 
+            //Can have many reviewPosts, Comments, Transaction
         public virtual ICollection<ReviewPost> ReviewPosts { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<LeadTransaction> Transactions { get; set; }
+
+        //Can only have 1 userProfile
         public virtual UserProfile UserProfile { get; set; }
 
         //Add methods if any (update)

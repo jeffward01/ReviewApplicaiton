@@ -60,10 +60,13 @@ namespace ReviewApplication.CORE.Domain
         //Add ProductInformation (Leads Offered)
 
         //Add Virtual Properties
+        //Can have many products, reviewposts, comments, transactions
         public virtual ICollection<LeadProduct> LeadProducts { get; set; }
         public virtual ICollection<ReviewPost> ReviewPosts { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<LeadTransaction> Transactions { get; set; }
+
+        //Can only have one userProfile
         public virtual UserProfile UserProfile { get; set; }
 
 

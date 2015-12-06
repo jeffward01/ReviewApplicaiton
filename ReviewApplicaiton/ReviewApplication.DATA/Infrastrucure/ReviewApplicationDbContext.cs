@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using ReviewApplication.CORE.Domain;
+using ReviewApplication.CORE.Infrastructure;
 
-namespace ReviewApplication.CORE.Infrastructure
+namespace ReviewApplication.Data.Infrastructure
 {
-    public class ReviewApplicationDbContext : IdentityDbContext, IReviewApplicationDbContext 
+    public class ReviewApplicationDbContext : DbContext
     {
         public ReviewApplicationDbContext() : base("ReviewApplication")
         {

@@ -5,10 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using ReviewApplication.CORE.Models;
 using Microsoft.AspNet.Identity;
+using ReviewApplication.CORE.Repository;
+using ReviewApplication.CORE.Models;
+using ReviewApplication.CORE.Domain;
 
 namespace ReviewApplication.CORE.Domain
 {
-   public class UserProfile : IUserProfile<int>
+   public class UserProfile : IUser<int>
     {
         public int UserID { get; set; } // Primary Key
 
