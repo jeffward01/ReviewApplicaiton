@@ -1,6 +1,6 @@
 ﻿using ReviewApplication.CORE.Domain;
 using ReviewApplication.CORE.Repository;
-using ReviewApplication.DATA.Infrastrucure;
+using ReviewApplication.DATA.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ReviewApplication.DATA.Repository
 {
-    public class ReviewPostRepository : Respository<ReviewPost>, IReviewPostRepository
+    public class ReviewPostRepository : Repository<ReviewPost>, IReviewPostRepository
     {
         public ReviewPostRepository(IDatabaseFactory databaseFactory) : base(databaseFactory)
         { }

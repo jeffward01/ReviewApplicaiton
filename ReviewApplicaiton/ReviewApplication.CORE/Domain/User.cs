@@ -13,9 +13,9 @@ namespace ReviewApplication.CORE.Domain
 {
    public class User : IUser<int>
     {
-        public int UserID { get; set; } // Primary Key
+        public int Id { get; set; } // Primary Key
 
-        public string  Email { get; set; }
+        public string Email { get; set; }
         public string ResetEmail { get; set; }
         public string UserName { get; set; }
         public string PasswordHash { get; set; }

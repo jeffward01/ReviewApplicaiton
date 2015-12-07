@@ -10,7 +10,7 @@ namespace ReviewApplication.CORE.Models
     {
         public DateTime TransactionDate { get; set; }
         public int LeadTransactionID { get; set; }
-        public int CompanyProfileID { get; set; }
+        public int CompanyID { get; set; }
         public int LeadProductID { get; set; }
         public int InsuranceAgentProfileID { get; set; }
         public int TransactionPrice { get; set; }

@@ -9,7 +9,7 @@ using ReviewApplication.CORE.Infrastructure;
 namespace ReviewApplication.CORE.Repository
 {
     
-    public interface ILeadProductRepositroy : IRepository<LeadProduct>
+    public interface ILeadProductRepository : IRepository<LeadProduct>
     {
 
     }

@@ -1,4 +1,3 @@
-C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.CORE\obj\Debug\ReviewApplication.CORE.csprojResolveAssemblyReference.cache
 C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.CORE\bin\Debug\ReviewApplication.CORE.dll.config
 C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.CORE\bin\Debug\ReviewApplication.CORE.dll
 C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.CORE\bin\Debug\ReviewApplication.CORE.pdb
@@ -38,3 +37,4 @@ C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.C
 C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.CORE\bin\Debug\System.Web.Http.Owin.xml
 C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.CORE\obj\Debug\ReviewApplication.CORE.dll
 C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.CORE\obj\Debug\ReviewApplication.CORE.pdb
+C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.CORE\obj\Debug\ReviewApplication.CORE.csprojResolveAssemblyReference.cache

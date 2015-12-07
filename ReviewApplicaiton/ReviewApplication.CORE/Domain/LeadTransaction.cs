@@ -35,7 +35,7 @@ namespace ReviewApplication.CORE.Domain
             }
 
             LeadProductID = leadTransactionModel.LeadProductID;
-            CompanyProfileID = leadTransactionModel.CompanyProfileID;
+            CompanyID = leadTransactionModel.CompanyID;
             LeadProductID = leadTransactionModel.LeadProductID;
             InsuranceAgentProfileID = leadTransactionModel.InsuranceAgentProfileID;
             TransactionPrice = leadTransactionModel.TransactionPrice;

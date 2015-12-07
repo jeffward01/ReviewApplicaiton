@@ -50,9 +50,9 @@ namespace ReviewApplication.API
             container.Register<IUnitOfWork, UnitOfWork>();
 
             container.Register<IAuthRepository, AuthRepository>();
-            container.Register<ICommentRepository, CommentReposito>();
+            container.Register<ICommentRepository, CommentRepository>();
             container.Register<IUserRepository, UserRepository>();
-            container.Register<ICompanyRepository, CompanyRepository>();
+            container.Register<ICompanyProfileRepository, CompanyProfileRepository>();
             container.Register<IInsuranceAgentProfileRepository, InsuranceAgentProfileRepository>();
             container.Register<ILeadProductRepository, LeadProductRepository>();
             container.Register<ILeadTransactionRepository, LeadTransactionRepository>();

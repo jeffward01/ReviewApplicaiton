@@ -85,13 +85,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infrastrucure\UnitOfWork.cs" />
-    <Compile Include="Infrastrucure\UserStore.cs" />
-    <Compile Include="OAuth\AuthRepository.cs" />
-    <Compile Include="Infrastrucure\DatabaseFactory.cs" />
-    <Compile Include="Infrastrucure\IDatabaseFactory.cs" />
-    <Compile Include="Infrastrucure\IReviewApplicationDbContext.cs" />
-    <Compile Include="Infrastrucure\ReviewApplicationDbContext.cs" />
+    <Compile Include="Infrastructure\Repository.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Infrastructure\UserStore.cs" />
+    <Compile Include="Repository\AuthRepository.cs" />
+    <Compile Include="Infrastructure\DatabaseFactory.cs" />
+    <Compile Include="Infrastructure\IDatabaseFactory.cs" />
+    <Compile Include="Infrastructure\ReviewApplicationDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CommentRepository.cs" />
     <Compile Include="Repository\CompanyProfileRepository.cs" />
@@ -105,18 +105,14 @@
     <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ReviewApplication.API\ReviewApplication.API.csproj">
-      <Project>{a5123167-675f-48c8-ba25-9bc72cba4491}</Project>
-      <Name>ReviewApplication.API</Name>
-    </ProjectReference>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\ReviewApplication.CORE\ReviewApplication.CORE.csproj">
       <Project>{37cfe397-3327-4eb2-aa51-87f97ed08bbb}</Project>
       <Name>ReviewApplication.CORE</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

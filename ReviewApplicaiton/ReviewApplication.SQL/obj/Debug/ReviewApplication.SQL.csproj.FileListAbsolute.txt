@@ -1,5 +1,4 @@
 C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.SQL\bin\Debug\ReviewApplication.SQL.dll
 C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.SQL\bin\Debug\ReviewApplication.SQL.pdb
-C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.SQL\obj\Debug\ReviewApplication.SQL.csprojResolveAssemblyReference.cache
 C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.SQL\obj\Debug\ReviewApplication.SQL.dll
 C:\Dev\github\jeffward01\ReviewApplication\ReviewApplicaiton\ReviewApplication.SQL\obj\Debug\ReviewApplication.SQL.pdb

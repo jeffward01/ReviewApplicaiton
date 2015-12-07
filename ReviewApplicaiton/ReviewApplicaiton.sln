@@ -35,6 +35,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ReviewApplication.CLIENT", 
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "54096"
+		SlnRelativePath = "ReviewApplication.CLIENT\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
